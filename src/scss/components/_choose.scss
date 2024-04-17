@@ -1,0 +1,164 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.choose {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__inner {
+    width: 100%;
+    max-width: 610px;
+  }
+
+  &__content {
+    margin-bottom: 32px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 25px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    &::before {
+      content: "";
+      position: relative;
+      width: 80px;
+      height: 80px;
+      background-image: url("../images/icons/sourced.svg");
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      aspect-ratio: 1/1;
+    }
+
+    h3 {
+      margin-bottom: 12px;
+      font-size: clamp(20px, 1.0833rem + 0.7407vi, 28px);
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    &--sourced {
+      &::before {
+        background-image: url("../images/icons/sourced.svg");
+      }
+    }
+
+    &--organic {
+      &::before {
+        background-image: url("../images/icons/organic.svg");
+      }
+    }
+
+    &--practices {
+      &::before {
+        background-image: url("../images/icons/practices.svg");
+      }
+    }
+
+    &--support {
+      &::before {
+        background-image: url("../images/icons/support.svg");
+      }
+    }
+
+    &--heart {
+      &::before {
+        background-image: url("../images/icons/heart.svg");
+      }
+    }
+
+    &--transparency {
+      &::before {
+        background-image: url("../images/icons/transparency.svg");
+      }
+    }
+
+    &--eco {
+      &::before {
+        background-image: url("../images/icons/eco.svg");
+      }
+    }
+
+    &--packaging {
+      &::before {
+        background-image: url("../images/icons/packaging.svg");
+      }
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+    border-radius: calc(var(--radius-main) * 3);
+  }
+
+  h2 {
+    span {
+      display: inline;
+    }
+  }
+
+  p {
+    letter-spacing: 0.03em;
+  }
+
+  @include media(tablet) {
+    &__wrapper {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__inner {
+      max-width: 100%;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    &__image {
+      img {
+        width: 100%;
+        object-position: center;
+        aspect-ratio: 16/9;
+      }
+    }
+
+    &__item {
+      flex-direction: column;
+
+      &::before {
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+      }
+
+      &:last-child {
+        grid-column: 2 span;
+      }
+    }
+  }
+
+  @include media(mobile-m) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      &:last-child {
+        grid-column: auto;
+      }
+    }
+  }
+}

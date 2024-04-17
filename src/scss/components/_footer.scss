@@ -1,0 +1,28 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.footer {
+  padding: rem(43) 0 31px;
+  background-color: var(--color-green-900);
+
+  &__bottom {
+    font-family: var(--font-family-secondary);
+    text-align: center;
+    color: var(--color-green-400);
+
+    p {
+      line-height: 1.33;
+      letter-spacing: 0;
+    }
+  }
+
+  .logo {
+    margin-right: 16px;
+  }
+
+  @include media(mobile-l) {
+    .logo {
+      margin-right: 0;
+    }
+  }
+}
