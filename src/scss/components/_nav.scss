@@ -24,7 +24,7 @@
 
   &__item {
     &:not(:last-of-type) {
-      margin-right: 33px;
+      margin-right: 50px;
 
       @include media(tablet-wide) {
         margin-right: 15px;
@@ -44,7 +44,7 @@
       content: "";
       position: absolute;
       left: 0;
-      bottom: -2px;
+      bottom: -30px;
       width: 100%;
       height: 3px;
       background-color: var(--color-green-400);
