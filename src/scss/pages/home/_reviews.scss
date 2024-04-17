@@ -1,0 +1,81 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.reviews {
+  &__content {
+    margin: 0 auto rem(60);
+    width: 100%;
+    max-width: 660px;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  &__item {
+    padding: 24px;
+    box-shadow: 0 4px 100px 0 rgba(175, 173, 181, 0.1);
+
+    &::before {
+      content: "";
+      position: relative;
+      display: block;
+      margin-bottom: 24px;
+      width: 40px;
+      height: 40px;
+      background-image: url("../images/icons/quote.svg");
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    img {
+      overflow: hidden;
+      border-radius: 50%;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    font-weight: var(--fw-700);
+    color: var(--color-black);
+    line-height: 1.33;
+    gap: 10px;
+
+    &::before {
+      content: "";
+      position: relative;
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-image: url("../images/icons/star.svg");
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  p {
+    margin-bottom: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}

@@ -2,76 +2,69 @@
 @use "../utils/mixins/" as *;
 
 .contacts {
-  padding: rem(86) 0;
-
   &__wrapper {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: calc(var(--radius-main) * 8);
-    padding: 0 rem(106);
-    min-height: 500px;
-    background-color: var(--color-green-900);
   }
 
   &__content {
-    z-index: 2;
-    width: 100%;
-    max-width: 715px;
-  }
-
-  img {
-    position: absolute;
-    right: 70px;
-    bottom: 0;
-    pointer-events: none;
-  }
-
-  &__inner {
     position: absolute;
     right: 0;
-    bottom: 0;
-    border-radius: calc(var(--radius-main) * 3);
-    padding: 24px;
+    left: 0;
+    margin: 0 auto;
+    top: 30px;
     width: 100%;
-    max-width: 596px;
-    box-shadow: 106px -86px 100px 0 rgba(39, 113, 160, 0.14);
-    color: var(--color-grey-400);
-    background: linear-gradient(90deg, rgba(254, 254, 254, 0.7) 0%, rgba(218, 246, 202, 0.7) 100%);
-    backdrop-filter: blur(66px);
-    gap: 24px;
+    max-width: 610px;
   }
 
   &__form {
-    display: flex;
-    justify-content: space-between;
     width: 100%;
     max-width: 612px;
     gap: 24px;
 
-    label {
+    label,
+    textarea {
       width: 100%;
     }
 
-    input {
-      border-radius: 16px;
-      padding: 16 24px;
+    input,
+    textarea {
+      padding: 11px 24px;
       width: 100%;
       max-width: 100%;
-      color: var(--color-white);
-      background-color: rgba(255, 255, 255, 0.08);
+      background-color: var(--color-white);
 
       &::placeholder {
-        line-height: 1.33;
-        color: var(--color-white);
+        line-height: 1.44;
+        color: var(--color-grey-400);
       }
     }
+
+    textarea {
+      min-height: 110px;
+      resize: none;
+    }
+  }
+
+  &__inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 30px;
+    gap: 10px;
+  }
+
+  &__box {
+    display: grid;
+    gap: 10px;
   }
 
   h2 {
     margin-bottom: rem(48);
     color: var(--color-white);
+    text-align: center;
+  }
+
+  .btn {
+    margin: 0 auto;
   }
 
   @include media(tablet) {

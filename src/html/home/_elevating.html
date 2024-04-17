@@ -1,7 +1,7 @@
 <section class="elevating section">
 
   <div class="container">
-    <div class="elevating__contnent">
+    <div class="elevating__content">
       <span class="slogan">
         Services
       </span>
@@ -21,7 +21,7 @@
 
     <ul class="elevating__list swiper-wrapper">
 
-      <include src="./html/_simple-article.html" locals='{
+      <include src="./html/_simple-cards.html" locals='{
         "class": "cards swiper-slide",
         "images": "yellow_chair",
         "categories": "Design Planning",
@@ -30,7 +30,7 @@
         "text": "From concept to creation, we craft bespoke design plans to bring your vision to life, ensuring every detail reflects your unique style and ambiance."
         }'></include>
 
-      <include src="./html/_simple-article.html" locals='{
+      <include src="./html/_simple-cards.html" locals='{
         "class": "cards swiper-slide",
         "images": "furnishings",
         "categories": "Procurement",
@@ -39,17 +39,16 @@
         "text": "Access our extensive network of suppliers to procure top-of-the-line furnishings, equipment, and decor meticulously selected for their quality and durability."
         }'></include>
 
-      <include src="./html/_simple-article.html" locals='{
+      <include src="./html/_simple-cards.html" locals='{
         "class": "cards swiper-slide",
         "images": "solutions",
         "categories": "Customization",
         "title": "Personalized Solutions",
         "desc": "Personalized Solutions",
-        "text": "Elevate your space with custom solutions tailored to your brand identity and style preferences, from
-        bespoke furniture pieces to unique decor accents that set your establishment apart."
+        "text": "Elevate your space with custom solutions tailored to your brand identity and style preferences, from bespoke furniture pieces to unique decor accents that set your establishment apart."
         }'></include>
 
-      <include src="./html/_simple-article.html" locals='{
+      <include src="./html/_simple-cards.html" locals='{
         "class": "cards swiper-slide",
         "images": "yellow_canvas",
         "categories": "Installation",
@@ -59,6 +58,16 @@
         }'></include>
 
     </ul>
+
+    <div class="slider__nav">
+      <button class="btn btn--slider btn--prev" type="button">
+      </button>
+
+      <div class="swiper-pagination"></div>
+
+      <button class="btn btn--slider btn--next" type="button">
+      </button>
+    </div>
   </div>
 
 

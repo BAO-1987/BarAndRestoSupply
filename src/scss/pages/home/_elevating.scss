@@ -1,0 +1,17 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.elevating {
+  &__content {
+    margin: 0 auto rem(60);
+    width: 100%;
+    max-width: 656px;
+    text-align: center;
+  }
+
+  &__swiper {
+    overflow: hidden;
+    // margin-right: -20%;
+    // margin-left: -20%;
+  }
+}

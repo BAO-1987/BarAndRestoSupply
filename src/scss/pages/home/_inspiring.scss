@@ -1,0 +1,31 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.inspiring {
+  &__content {
+    margin-bottom: 40px;
+  }
+
+  &__swiper {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__full {
+    overflow: hidden;
+    width: 100%;
+    max-width: 760px;
+  }
+
+  &__thumbs {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 30px;
+    max-height: 740px;
+
+    .swiper-slide {
+      cursor: pointer;
+    }
+  }
+}

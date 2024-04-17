@@ -74,9 +74,9 @@ body {
 }
 
 .logo {
-  margin-right: rem(68);
+  margin-right: 16px;
   width: 100%;
-  max-width: 261px;
+  max-width: 281px;
 
   @include media(tablet-wide) {
     max-width: 220px;

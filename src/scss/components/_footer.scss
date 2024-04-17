@@ -2,13 +2,12 @@
 @use "../utils/mixins/" as *;
 
 .footer {
-  padding: rem(43) 0 31px;
-  background-color: var(--color-green-900);
+  padding: rem(60) 0;
+  background-color: var(--color-grey-200);
 
   &__bottom {
-    font-family: var(--font-family-secondary);
-    text-align: center;
-    color: var(--color-green-400);
+   padding: 20px 0;
+   background-color: var(--color-white);
 
     p {
       line-height: 1.33;

@@ -5,24 +5,19 @@ h1,
 h2,
 h3 {
   overflow: hidden;
-  font-family: var(--font-family-secondary);
   font-weight: var(--fw-700);
-  font-size: clamp(35px, 1.4583rem + 3.2407vi, 70px);
+  font-size: clamp(2.125rem, 1.5rem + 2.7778vi, 4rem);
   line-height: 1.1;
-  color: var(--color-green-900);
-
-  span {
-    display: inline-block;
-    color: var(--color-green-400);
-  }
+  color: var(--color-black);
 }
 
 h2 {
-font-size: clamp(1.875rem, 1.5833rem + 1.2963vi, 2.75rem);
+  margin-bottom: 30px;
+  font-size: clamp(1.875rem, 1.5833rem + 1.2963vi, 2.75rem);
 }
 
 h3 {
-  font-size: clamp(18px, 1.0833rem + 0.7407vi, 18px);
+  font-size: clamp(1.125rem, 0.9583rem + 0.7407vi, 1.625rem);
 }
 
 p {
