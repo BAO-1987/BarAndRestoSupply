@@ -17,9 +17,12 @@
   }
 
   &__nav {
-    position: absolute;
-    top: 50%;
+    // position: absolute;
+    // top: 50%;
     .btn {
+      position: absolute;
+      top: 35%;
+      transform: translateY(-50%);
       &.swiper-button-disabled {
         opacity: 0.2;
         pointer-events: none;
@@ -28,6 +31,11 @@
       &--prev {
         left: 30px;
         scale: -1 1;
+      }
+
+      &--next {
+        left: auto;
+        right: 30px;
       }
     }
   }

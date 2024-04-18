@@ -15,20 +15,39 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, auto);
+    gap: 30px 20px;
   }
 
   &__item {
     position: relative;
     z-index: 1;
+    width: 100%;
 
     &::before {
       content: "";
       position: absolute;
       z-index: 1;
-      background: linear-gradient(180deg, #151411 25.73%, #151411 100%);
+      background: linear-gradient(180deg, rgba(21, 20, 17, 0) 35.378%, rgb(21, 20, 17) 137.5%);
       inset: 0;
-      opacity: 0.7;
     }
+
+    &:first-child {
+      grid-row: 2 span;
+      max-width: 505px;
+    }
+  }
+
+  &__text,
+  h3 {
+    color: var(--color-white);
+    z-index: 1;
+    position: relative;
+  }
+
+  &__text {
+    position: absolute;
+    padding: 0 30px 30px;
+    bottom: 0;
   }
 }

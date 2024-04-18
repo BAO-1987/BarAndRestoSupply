@@ -12,7 +12,6 @@ function createThumbsSlider(selector) {
     direction: 'vertical',
     lazy: true,
     loop: true,
-    watchSlidesVisibility: true,
     watchSlidesProgress: true,
 
     breakpoints: {
@@ -35,11 +34,14 @@ function createMainSlider(selector, thumbsSwiper) {
     modules: [Navigation, Thumbs],
     spaceBetween: 10,
     lazy: true,
-    allowTouchMove: false,
     touchRatio: 1,
-    loop: true,
     thumbs: {
       swiper: thumbsSwiper,
+    },
+
+    navigation: {
+      nextEl: '.inspiring__nav .btn--next',
+      prevEl: '.inspiring__nav .btn--prev',
     },
   });
 }

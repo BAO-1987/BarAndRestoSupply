@@ -13,12 +13,11 @@
     margin: 0 auto;
     top: 30px;
     width: 100%;
-    max-width: 610px;
+    max-width: 600px;
   }
 
   &__form {
     width: 100%;
-    max-width: 612px;
     gap: 24px;
 
     label,
@@ -28,12 +27,13 @@
 
     input,
     textarea {
-      padding: 11px 24px;
+      padding: 11px 0 11px 24px;
       width: 100%;
       max-width: 100%;
       background-color: var(--color-white);
 
       &::placeholder {
+        font-size: 18px;
         line-height: 1.44;
         color: var(--color-grey-400);
       }
@@ -48,18 +48,19 @@
   &__inputs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     gap: 10px;
   }
 
   &__box {
     display: grid;
-    gap: 10px;
   }
 
   h2 {
-    margin-bottom: rem(48);
+    font-size: clamp(1.875rem, 1.625rem + 1.1111vi, 2.625rem);
     color: var(--color-white);
+    line-height: 1.24;
+    letter-spacing: -0.01em;
     text-align: center;
   }
 
