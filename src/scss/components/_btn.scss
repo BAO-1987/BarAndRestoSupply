@@ -8,7 +8,7 @@
   justify-content: center;
   border: 2px solid transparent;
   border-radius: 0;
-  padding: 14px 50px;
+  padding: 13px 50px;
   width: 100%;
   height: max-content;
   max-width: fit-content;
@@ -53,14 +53,15 @@
 
     &:hover,
     &:focus {
-      color: var(--color-white);
+      border-color: transparent;
+      color: var(--color-black);
       background-color: var(--color-grey-10);
     }
 
     &.active {
       border-color: transparent;
       color: var(--color-black);
-      background-color: var(--color-green-400);
+      background-color: var(--color-grey-10);
       box-shadow: 0 4px 120px 0 rgba(175, 173, 181, 0.15);
     }
   }
@@ -86,5 +87,38 @@
   &--request {
     color: var(--color-white) !important;
     background-color: var(--color-green-400) !important;
+  }
+
+  &--elevating {
+    position: relative;
+    z-index: 2;
+    border-color: transparent;
+    border-radius: 50%;
+    padding: 0;
+    height: 52px;
+    max-width: 52px;
+    backdrop-filter: blur(15px);
+    background: rgba(21, 20, 17, 0.6);
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../images/icons/chevron.svg");
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: transparent;
+
+      &::before {
+        opacity: 1;
+      }
+    }
   }
 }

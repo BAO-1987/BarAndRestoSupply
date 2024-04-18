@@ -10,7 +10,7 @@ body {
 .page {
   height: var(--vh);
   font-family: var(--font-family-primary);
-  font-weight: var(--fw-400);
+  font-weight: var(--fw-500);
   font-style: normal;
   font-size: clamp(16px, 1vw, 20px);
   line-height: 1.8;
@@ -54,7 +54,6 @@ body {
   }
 }
 
-
 .container {
   margin: 0 auto;
   padding: 0 var(--container-offset);
@@ -74,7 +73,6 @@ body {
 }
 
 .logo {
-  margin-right: 16px;
   width: 100%;
   max-width: 281px;
 

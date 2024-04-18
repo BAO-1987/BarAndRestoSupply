@@ -23,23 +23,33 @@
   }
 
   &__content {
-    position: relative;
-    margin-bottom: 60px;
+    margin: 0 auto rem(60);
     width: 100%;
     max-width: 820px;
+    text-align: center;
 
     &::before {
       content: "";
       position: absolute;
-      left: -100px;
-      width: 247px;
-      height: 242px;
+      left: -145px;
+      bottom: -10px;
+      width: 130px;
+      height: 318px;
       background-image: url("../images/icons/big-arrow.svg");
       background-position: 0 0;
       background-size: contain;
       background-repeat: no-repeat;
 
     }
+  }
+
+  &__btn {
+    position: absolute;
+    translate: 0 31px;
+    left: -29px;
+    width: fit-content;
+    padding: 0 29px 29px;
+    background-color: var(--color-white);
   }
 
   h1 {
@@ -59,8 +69,19 @@
   }
 
   &--home {
+
+  #{$root}__content {
+      position: relative;
+      // margin-bottom: 0;
+    }
     p {
       font-size: 20px;
+    }
+  }
+
+  &--catalog {
+   #{$root}__content {
+      max-width: 595px;
     }
   }
 

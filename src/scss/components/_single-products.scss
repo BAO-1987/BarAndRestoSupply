@@ -1,9 +1,7 @@
 @use "../utils/functions/" as *;
 @use "../utils/mixins" as *;
 
-.single-product {
-  padding: rem(70) 0;
-
+.product {
   &__inner {
     display: flex;
     align-items: center;
@@ -16,66 +14,33 @@
     max-width: 610px;
   }
 
-  // &__link {
-  //   display: flex;
-  //   align-items: center;
-  //   margin-bottom: 24px;
-  //   font-weight: var(--fw-500);
-  //   font-size: 18px;
-  //   letter-spacing: 0.02em;
-  //   text-decoration: underline;
-  //   text-decoration-color: transparent;
-  //   color: var(--color-green-400);
-  //   transition: text-decoration-color 0.4s linear;
-  //   gap: 10px;
+  &__list {
+    margin-bottom: 20px;
 
-  //   &::before {
-  //     content: "";
-  //     position: relative;
-  //     width: 20px;
-  //     height: 20px;
-  //     background-image: url("../images/icons/arrow.svg");
-  //     background-position: 0 0;
-  //     background-size: cover;
-  //     background-repeat: no-repeat;
-  //   }
-
-  //   &:hover {
-  //     text-decoration-color: var(--color-green-400);
-  //   }
-  // }
-
-  &__desc {
-    h2 {
-      margin-bottom: 24px;
-      font-size: clamp(20px, 1rem + 1.1111vi, 32px);
-      color: var(--color-green-400);
+    li {
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
     }
   }
 
-  &__list {
-    li {
-      font-size: 18px;
-      letter-spacing: 0.025em;
+  &__price {
+    font-weight: var(--fw-700);
+    font-size: clamp(1.875rem, 1.5833rem + 1.2963vi, 2.75rem);
+    color: var(--color-black);
 
-      span {
-        color: var(--color-green-400);
-      }
-
-      &:not(:last-child) {
-        margin-bottom: 24px;
-      }
+    sup {
+      font-size: 29px;
     }
   }
 
   h1,
   p {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
-  img {
-    overflow: hidden;
-    border-radius: calc(var(--radius-main) * 3);
+  h1 {
+    font-size: clamp(1.875rem, 1.5833rem + 1.2963vi, 2.75rem);
   }
 
   @include media(tablet) {

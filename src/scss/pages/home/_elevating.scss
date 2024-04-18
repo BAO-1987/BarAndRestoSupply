@@ -11,7 +11,24 @@
 
   &__swiper {
     overflow: hidden;
+    position: relative;
     // margin-right: -20%;
     // margin-left: -20%;
+  }
+
+  &__nav {
+    position: absolute;
+    top: 50%;
+    .btn {
+      &.swiper-button-disabled {
+        opacity: 0.2;
+        pointer-events: none;
+      }
+
+      &--prev {
+        left: 30px;
+        scale: -1 1;
+      }
+    }
   }
 }

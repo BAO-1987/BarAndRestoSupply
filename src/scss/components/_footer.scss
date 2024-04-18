@@ -2,21 +2,29 @@
 @use "../utils/mixins/" as *;
 
 .footer {
-  padding: rem(60) 0;
-  background-color: var(--color-grey-200);
+  &__top {
+    padding: rem(60) 0;
+    background-color: var(--color-grey-200);
+  }
 
   &__bottom {
-   padding: 20px 0;
-   background-color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    font-size: 20px;
+    color: var(--color-black);
+    background-color: var(--color-white);
 
     p {
-      line-height: 1.33;
+      font-size: 20px;
+      line-height: 1.6;
       letter-spacing: 0;
     }
   }
 
-  .logo {
-    margin-right: 16px;
+  &__list {
+    display: flex;
+    gap: 40px;
   }
 
   @include media(mobile-l) {

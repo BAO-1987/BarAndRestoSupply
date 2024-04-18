@@ -11,7 +11,7 @@ const slider = new Swiper('.elevating__swiper', {
   loop: true,
   grabCursor: true,
   navigation: {
-    nextEl: '.slider__swiper .btn--next',
-    prevEl: '.slider__swiper .btn--prev',
+    nextEl: '.elevating__nav .btn--next',
+    prevEl: '.elevating__nav .btn--prev',
   },
 });

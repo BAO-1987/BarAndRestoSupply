@@ -42,13 +42,11 @@
       content: "";
       position: absolute;
       left: 0;
-      bottom: -30px;
-      width: 100%;
+      bottom: -50px;
+      width: 75px;
       height: 3px;
       background-color: var(--color-green-400);
-      transform: scale(0);
-      transform-origin: left;
-      transition: transform 0.3s linear;
+    opacity: 0;
     }
 
     &:hover {
@@ -59,7 +57,7 @@
 
     &.true {
       &::before {
-        transform: scale(1);
+        opacity: 1;
       }
     }
   }
@@ -71,7 +69,6 @@
   }
 
   &--footer {
-    margin-bottom: 28px;
     #{$root}__list {
       margin: 0;
     }
