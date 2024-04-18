@@ -39,7 +39,6 @@
       background-position: 0 0;
       background-size: contain;
       background-repeat: no-repeat;
-
     }
   }
 
@@ -69,8 +68,7 @@
   }
 
   &--home {
-
-  #{$root}__content {
+    #{$root}__content {
       position: relative;
       // margin-bottom: 0;
     }
@@ -80,14 +78,33 @@
   }
 
   &--catalog {
-   #{$root}__content {
+    #{$root}__content {
       max-width: 595px;
     }
   }
 
-  // &--overlay {
-  //   #{$root}__content {
-  //     translate: 0 16px;
-  //   }
-  // }
+  &--services {
+    padding: 60px 0 120px;
+
+    #{$root}__content {
+      max-width: 100%;
+
+      p {
+        margin: 0 auto;
+        max-width: 505px;
+      }
+    }
+
+     #{$root}__image {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: -60px;
+        height: 2px;
+        width: 100%;
+        background-color: var(--color-grey-200);
+      }
+     }
+  }
 }

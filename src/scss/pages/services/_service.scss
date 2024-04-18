@@ -1,0 +1,13 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.service {
+  &__content {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
