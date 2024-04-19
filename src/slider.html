@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+<include src="./html/_head.html" locals='{"title": "Services Showcase"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+    <include src="./html/_header.html" locals='{"page": ""}'></include>
+
+    <main class="main">
+
+      <section class="slider">
+
+        <div class="container">
+
+          <div class="slider__content">
+            <h1>
+              Services Showcase
+            </h1>
+
+            <p>
+              We display products based on the latest products we have, if you want
+              to see our old products please enter the name of the item
+            </p>
+          </div>
+
+          <div class="slider__swiper">
+
+            <ul class="slider__list swiper-wrapper">
+
+              <include src="./html/_simple-slide.html" locals='{
+        "images": "cafe",
+        "desc": "Design Planning: Urban Oasis Cafe",
+        "subtitle": "Design Planning",
+        "title": "Design Planning: `Urban Oasis Cafe`",
+        "text": "`Urban Oasis Cafe` is a contemporary coffee shop located in the heart of the city, aiming to provide a tranquil escape for busy urban dwellers. Our design planning process began with extensive consultations with the client to understand their vision and brand identity. We developed a concept that blends natural elements with modern design, incorporating lush greenery, warm wood tones, and sleek industrial accents. The space features comfortable seating areas, intimate nooks for conversation, and a central bar area where patrons can enjoy artisanal coffee and light bites. Our meticulous space planning ensured optimal flow and functionality, creating an inviting atmosphere where guests can relax and recharge. Explore the images below to see how our design planning transformed `Urban Oasis Cafe` into a stylish retreat in the midst of the bustling city."
+        }'></include>
+
+              <include src="./html/_simple-slide.html" locals='{
+        "images": "bistro",
+        "desc": "Procurement: Bistro Chic Brasserie",
+        "subtitle": "Procurement",
+        "title": "Procurement: `Bistro Chic Brasserie`",
+        "text": "`Bistro Chic Brasserie` is a French-inspired eatery that exudes sophistication and charm. For this project, our procurement service focused on sourcing high-quality furnishings, fixtures, and decor items to enhance the ambiance of the restaurant. We curated a selection of elegant furniture pieces, including bistro-style chairs and marble-topped tables, to evoke the classic Parisian bistro experience. Our attention to detail extended to the lighting fixtures, tableware, and decorative accents, each chosen to complement tho overall aesthetic and create a cohesive dining environment. The result is a timeless space that captures the essence of French culinary culture while offering modern comforts and style. Take a closer look at the images below to see how our procurement expertise brought `Bistro Chic Brasserie` to life."
+       }'></include>
+
+              <include src="./html/_simple-slide.html" locals='{
+        "images": "restaurant",
+        "desc": "Customization Options: Artisanal Eats Restaurant",
+        "subtitle": "Customization Options",
+        "title": "Customization Options: `Artisanal Eats Restaurant`",
+        "text": "`Artisanal Eats Restaurant` is a culinary destination that celebrates handcrafted cuisine and local ingredients. Our customization options allowed us to add unique touches to this space, enhancing its character and charm. We worked closely with the client to create custom decor accents that reflect the restaurant`s commitment to artisanal craftsmanship. From hand-painted murals depicting scenes of farm-to-table dining to bespoke signage crafted from reclaimed wood, each element was designed to tell a story and evoke a sense of authenticity. Our customization services extended to the furniture and fixtures as well, with custom upholstery and finishes adding a personal touch to the dining experience. Explore the images below to see how our customization options transformed `Artisanal Eats Restaurant` into a truly unique and memorable destination."
+       }'></include>
+
+              <include src="./html/_simple-slide.html" locals='{
+        "images": "bar",
+        "desc": "Installation and Setup: Cozy Corner Bar",
+        "subtitle": "Installation and Setup",
+        "title": "Installation and Setup: `Cozy Corner Bar`",
+        "text": "`Cozy Corner Bar` is a neighborhood watering hole known for its warm atmosphere and friendly service. Our installation and setup service played a crucial role in transforming this space into a welcoming destination for locals and visitors alike. We managed the delivery, assembly, and placement of all furniture and equipment, ensuring everything was positioned for optimal functionality and comfort. The bar area features custom-built shelving for liquor display, comfortable bar stools, and strategically placed lighting for ambiance. Seating areas were arranged to encourage socializing and conversation, with plush sofas and armchairs providing cozy spots to relax. From the installation of the bar taps to the hanging of artwork on the walls, every detail was executed with precision and care. Explore the images below to see how our installation and setup services brought `Cozy Corner Bar` to life."
+       }'></include>
+
+            </ul>
+
+            <div class="slider__nav">
+              <button class="btn btn--slider btn--prev" type="button">
+              </button>
+
+              <button class="btn btn--slider btn--next" type="button">
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

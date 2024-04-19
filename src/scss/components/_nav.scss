@@ -26,7 +26,7 @@
       margin-right: 50px;
 
       @include media(tablet-wide) {
-        margin-right: 15px;
+        margin-right: 25px;
       }
     }
   }
@@ -46,7 +46,7 @@
       width: 75px;
       height: 3px;
       background-color: var(--color-green-400);
-    opacity: 0;
+      opacity: 0;
     }
 
     &:hover {
@@ -87,17 +87,17 @@
     }
   }
 
-  @include media(mobile-l) {
+  @include media(mobile-m) {
     &--footer {
-      #{$root}__link {
-        font-size: 16px;
+      #{$root}__list {
+        flex-direction: column;
       }
     }
   }
 
-  @include media(mobile-m) {
+  @include media(mobile-s) {
     &--footer {
-      #{$root}__list {
+      #{$root}__btns {
         flex-direction: column;
       }
     }

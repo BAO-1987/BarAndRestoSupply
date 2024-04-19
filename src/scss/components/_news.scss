@@ -42,4 +42,15 @@
     margin-bottom: 12px;
     font-size: 24px;
   }
+
+  @include media(mobile-l) {
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 2/1;
+    }
+  }
 }

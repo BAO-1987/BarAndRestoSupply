@@ -15,12 +15,26 @@ function createThumbsSlider(selector) {
     watchSlidesProgress: true,
 
     breakpoints: {
+
       360: {
         direction: 'horizontal',
-        spaceBetween: 5,
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+
+      460: {
+        direction: 'horizontal',
+        slidesPerView: 3,
+        spaceBetween: 10,
       },
 
       768: {
+        direction: 'horizontal',
+        spaceBetween: 15,
+        slidesPerView: 4,
+      },
+
+      1182: {
         direction: 'vertical',
         spaceBetween: 0,
       }
@@ -48,14 +62,4 @@ function createMainSlider(selector, thumbsSwiper) {
 
 const galleryThumbs1 = createThumbsSlider('.inspiring__thumbs');
 
-// const galleryThumbs2 = createThumbsSlider('.menu__thumbs-2');
-// const galleryThumbs3 = createThumbsSlider('.menu__thumbs-3');
-// const galleryThumbs4 = createThumbsSlider('.menu__thumbs-4');
-// const galleryThumbs5 = createThumbsSlider('.menu__thumbs-5');
-
 const galleryTop1 = createMainSlider('.inspiring__full', galleryThumbs1);
-
-// const galleryTop2 = createMainSlider('.menu__full-2', galleryThumbs2);
-// const galleryTop3 = createMainSlider('.menu__full-3', galleryThumbs3);
-// const galleryTop4 = createMainSlider('.menu__full-4', galleryThumbs4);
-// const galleryTop5 = createMainSlider('.menu__full-5', galleryThumbs5);

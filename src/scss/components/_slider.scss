@@ -1,0 +1,113 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.slider {
+  padding: 60px 0;
+
+  &__content {
+    margin: 0 auto 50px;
+    width: 100%;
+    max-width: 595px;
+    text-align: center;
+  }
+
+  &__swiper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__item {
+    position: relative;
+    height: auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(21, 20, 17, 0) 35.378%, rgb(21, 20, 17) 137.5%);
+      inset: 0;
+    }
+  }
+
+  &__list {
+    padding-bottom: 250px;
+  }
+
+  &__desc {
+    position: absolute;
+    z-index: 1;
+    margin: 0 auto;
+    translate: 0 -139px;
+    left: 0;
+    right: 0;
+    padding: 40px;
+    width: 100%;
+    max-width: 1080px;
+    box-shadow: 0 4px 100px 0 rgba(175, 173, 181, 0.1);
+    background-color: var(--color-white);
+  }
+
+  &__nav {
+    .btn {
+      position: absolute;
+      top: 28%;
+      transform: translateY(-50%);
+      &.swiper-button-disabled {
+        opacity: 0.2;
+        pointer-events: none;
+      }
+
+      &--prev {
+        scale: -1 1;
+        left: 30px;
+      }
+
+      &--next {
+        right: 30px;
+        left: auto;
+      }
+    }
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-bottom: 16px;
+    font-size: 26px;
+  }
+
+  span {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  @include media(tablet) {
+    &__desc {
+      padding: 16px;
+    }
+
+    &__content,
+    &__list {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__list {
+      margin-bottom: 15px;
+    }
+
+    &__desc {
+      position: relative;
+      padding-top: 24px;
+      max-width: 100%;
+      inset: 0;
+    }
+
+    img {
+      margin-bottom: 24px;
+    }
+  }
+}

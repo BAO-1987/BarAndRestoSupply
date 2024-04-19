@@ -28,7 +28,7 @@
       display: block;
       margin-bottom: 10px;
       font-weight: var(--fw-700);
-      font-size: 44px;
+      font-size: clamp(2rem, 1.75rem + 1.1111vi, 2.75rem);
       line-height: 1.3;
       color: var(--color-black);
     }
@@ -36,5 +36,24 @@
 
   h1 {
     margin-bottom: 60px;
+  }
+
+  @include media(tablet) {
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__list {
+      justify-content: center;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 2/1;
+    }
   }
 }

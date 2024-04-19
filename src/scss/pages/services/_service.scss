@@ -4,10 +4,59 @@
 .service {
   &__content {
     margin-bottom: 30px;
+
+    .slogan {
+      margin-bottom: 10px;
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  &__item {
+    .cards__content {
+      padding-right: 70px;
+    }
+  }
+
+  @include media(tablet) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      .cards__content {
+        padding-right: 0;
+      }
+
+      &:last-child {
+        grid-column: 2 span;
+
+        img {
+          width: 100%;
+          aspect-ratio: 2/1;
+        }
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      img {
+        width: 100%;
+        aspect-ratio: 2/1;
+      }
+
+      &:last-child {
+        grid-column: auto;
+      }
+    }
   }
 }

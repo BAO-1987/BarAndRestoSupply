@@ -8,10 +8,10 @@
 
   &__content {
     position: absolute;
-    right: 0;
     left: 0;
-    margin: 0 auto;
+    right: 0;
     top: 30px;
+    margin: 0 auto;
     width: 100%;
     max-width: 600px;
   }
@@ -58,43 +58,53 @@
 
   h2 {
     font-size: clamp(1.875rem, 1.625rem + 1.1111vi, 2.625rem);
-    color: var(--color-white);
     line-height: 1.24;
     letter-spacing: -0.01em;
     text-align: center;
+    color: var(--color-white);
   }
 
   .btn {
     margin: 0 auto;
   }
 
-  @include media(tablet) {
-    padding-bottom: 40px;
-
+  @include media(mobile-l) {
     &__wrapper {
-      padding: 24px;
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 25px;
     }
 
-    img {
-      right: 0;
+    &__content {
+      position: relative;
+      inset: 0;
     }
 
     input {
       background-color: var(--color-green-400);
+
+      &::placeholder {
+        color: var(--color-white);
+      }
+    }
+
+    h2 {
+      color: var(--color-black);
     }
   }
 
-  @include media(mobile-l) {
-    padding-top: 50px;
-  }
-
   @include media(mobile-m) {
-    &__form {
-      flex-direction: column;
+    &__inputs {
+      grid-template-columns: 1fr;
+      gap: 20px;
 
       .btn {
         max-width: 100%;
       }
+    }
+
+    &__box {
+      gap: 20px;
     }
   }
 

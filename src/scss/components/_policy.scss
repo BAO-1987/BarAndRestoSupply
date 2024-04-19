@@ -2,21 +2,25 @@
 @use "../utils/mixins" as *;
 
 .policy {
-  letter-spacing: 0.02em;
-
   &__content {
     &:not(:last-child) {
-      margin-bottom: rem(48);
+      margin-bottom: 24px;
     }
   }
 
   h1 {
     margin-bottom: rem(60);
+    font-size: clamp(2.25rem, 2.0833rem + 0.7407vi, 2.75rem);
   }
 
   h2 {
-    margin-bottom: 24px;
-    font-size: clamp(24px, 1rem + 2.2222vi, 48px);
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  p,
+  li {
+    line-height: 1.6;
   }
 
   ul {
@@ -26,7 +30,7 @@
 
   li {
     padding-left: 10px;
-    letter-spacing: 0.02em;
+    color: var(--color-grey-400);
 
     &:not(:last-child) {
       margin-bottom: 3px;
@@ -34,13 +38,11 @@
 
     &::marker {
       content: "✓";
-      color: var(--color-green-900);
+      color: var(--color-orange-400);
     }
   }
 
   p {
-    line-height: 1.2;
-
     &:not(:last-child) {
       margin-bottom: 20px;
     }
@@ -48,14 +50,12 @@
 
   a {
     text-decoration: underline;
-    color: var(--color-green-900);
+    color: var(--color-orange-400);
   }
 
-  @include media(mobile-l) {
-    &__content {
-      &:not(:last-child) {
-        margin-bottom: 24px;
-      }
+  @include media(table) {
+    h1 {
+      margin-bottom: 30px;
     }
   }
 }

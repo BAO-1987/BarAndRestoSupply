@@ -54,7 +54,7 @@
 
   &__thumbs {
     overflow: hidden;
-    max-height: 840px;
+    max-height: 843px;
 
     .inspiring__item {
       display: flex;
@@ -139,5 +139,39 @@
 
   h2 {
     margin-bottom: 40px;
+  }
+
+  @include media(tablet-wide) {
+    &__swiper {
+      flex-direction: column;
+    }
+
+    &__full {
+      max-width: 100%;
+
+      .inspiring__item {
+        overflow: hidden;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__thumbs {
+      .inspiring__desc {
+        display: none;
+      }
+
+      .inspiring__item {
+        img {
+          width: 100%;
+        }
+        
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }

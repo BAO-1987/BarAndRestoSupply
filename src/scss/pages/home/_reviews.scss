@@ -16,6 +16,8 @@
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
     padding: 24px;
     box-shadow: 0 4px 100px 0 rgba(175, 173, 181, 0.1);
 
@@ -37,6 +39,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: auto;
   }
 
   &__author {
@@ -77,5 +80,31 @@
 
   h3 {
     font-size: 20px;
+  }
+
+  @include media(tablet) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      padding: 16px;
+
+      &:last-child {
+        grid-column: 2 span;
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      &:last-child {
+        grid-column: auto;
+      }
+    }
   }
 }

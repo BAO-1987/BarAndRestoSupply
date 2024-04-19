@@ -45,9 +45,9 @@
   }
 
   &--filter {
+    border-color: transparent;
     padding: 15px 20px;
     white-space: nowrap;
-    border-color: transparent;
     color: var(--color-grey-400);
     background-color: transparent;
 
@@ -60,37 +60,45 @@
 
     &.active {
       border-color: transparent;
+      box-shadow: 0 4px 120px 0 rgba(175, 173, 181, 0.15);
       color: var(--color-black);
       background-color: var(--color-grey-10);
-      box-shadow: 0 4px 120px 0 rgba(175, 173, 181, 0.15);
     }
   }
 
   &--request {
     color: var(--color-white) !important;
     background-color: var(--color-green-400) !important;
+
+    &:hover,
+    &:focus {
+      border-color: var(--color-green-400) !important;
+      color: var(--color-green-400) !important;
+      background-color: var(--color-white) !important;
+    }
   }
 
-  &--elevating {
+  &--elevating,
+  &--slider {
     position: relative;
     z-index: 2;
     border-color: transparent;
     border-radius: 50%;
-    padding: 0;
+    padding: 10px;
     height: 52px;
     max-width: 52px;
+    background-color: rgba(21, 20, 17, 0.6);
     backdrop-filter: blur(15px);
-    background: rgba(21, 20, 17, 0.6);
 
     &::before {
       content: "";
       position: absolute;
+      width: 24px;
+      height: 24px;
       background-image: url("../images/icons/chevron.svg");
       background-position: 0 0;
       background-size: cover;
       background-repeat: no-repeat;
-      width: 24px;
-      height: 24px;
     }
 
     &:hover,
@@ -106,8 +114,8 @@
 
   &--inspiring {
     padding: 32px;
-    background-color: var(--color-green-400);
     box-shadow: 0 4px 90px 0 rgba(175, 173, 181, 0.2);
+    background-color: var(--color-green-400);
 
     &::before {
       @include mask;
