@@ -1,0 +1,45 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+.news {
+  &__content {
+    margin: 0 auto 50px;
+    text-align: center;
+
+    p {
+      width: 100%;
+      max-width: 849px;
+      text-align: center;
+      margin-inline: auto;
+    }
+  }
+
+  &__image {
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    p {
+      text-align: justify;
+
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-bottom: 12px;
+    font-size: 24px;
+  }
+}
