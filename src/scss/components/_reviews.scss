@@ -94,6 +94,10 @@
     &__item {
       padding: 16px;
 
+      &::before {
+        margin-bottom: 16px;
+      }
+
       &:last-child {
         grid-column: 2 span;
       }

@@ -28,6 +28,14 @@
     gap: 40px;
   }
 
+  &__item {
+    transition: text-shadow 0.3s linear;
+
+    &:hover {
+      text-shadow: 0.4px 0.4px 0 currentcolor;
+    }
+  }
+
   @include media(tablet) {
     &__list {
       gap: 20px;

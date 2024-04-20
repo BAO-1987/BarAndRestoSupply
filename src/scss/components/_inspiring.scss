@@ -55,18 +55,16 @@
 
   &__thumbs {
     overflow: hidden scroll;
+    height: 100%;
     max-height: 843px;
 
     .inspiring__item {
       display: flex;
       align-items: center;
+      height: 100% !important;
       max-height: 260px;
       cursor: pointer;
       gap: 26px;
-
-      &:not(:last-child) {
-        margin-bottom: 30px;
-      }
     }
 
     .inspiring__desc {
@@ -178,7 +176,7 @@
 
   @include media(tablet) {
     padding: 30px 0;
-    
+
     h2 {
       margin-bottom: 20px;
     }
