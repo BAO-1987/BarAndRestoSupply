@@ -26,11 +26,11 @@
   }
 
   img {
-    width: 100%;
     margin-bottom: 26px;
+    width: 100%;
   }
 
-  @include media(mobile-l) {
+  @include media(tablet) {
     &__content {
       padding-right: 0;
     }

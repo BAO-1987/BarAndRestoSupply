@@ -34,14 +34,15 @@
   &__link {
     position: relative;
     color: var(--color-black);
+    background-color: transparent;
     font-size: 18px;
     line-height: 1.33;
-    background-color: transparent;
+    transition: text-shadow 0.3s linear;
 
     &::before {
       content: "";
       position: absolute;
-      bottom: -50px;
+      bottom: -48px;
       width: 75px;
       height: 3px;
       background-color: var(--color-green-400);
@@ -49,9 +50,7 @@
     }
 
     &:hover {
-      &::before {
-        transform: scale(1);
-      }
+      text-shadow: 0.4px 0.4px 0 currentcolor;
     }
 
     &.true {

@@ -1,10 +1,11 @@
-@use "../../utils/functions/" as *;
-@use "../../utils/mixins/" as *;
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
 
 .inspiring {
-  padding: 45px 0 60px;
+  padding: rem(37) 0 rem(60);
+
   &__content {
-    margin-bottom: 40px;
+    margin-bottom: rem(40);
   }
 
   &__swiper {
@@ -53,15 +54,15 @@
   }
 
   &__thumbs {
-    overflow: hidden;
+    overflow: hidden scroll;
     max-height: 843px;
 
     .inspiring__item {
       display: flex;
       align-items: center;
-      gap: 26px;
-      cursor: pointer;
       max-height: 260px;
+      cursor: pointer;
+      gap: 26px;
 
       &:not(:last-child) {
         margin-bottom: 30px;
@@ -138,7 +139,7 @@
   }
 
   h2 {
-    margin-bottom: 40px;
+    margin-bottom: rem(40);
   }
 
   @include media(tablet-wide) {
@@ -167,11 +168,19 @@
         img {
           width: 100%;
         }
-        
+
         &:not(:last-child) {
           margin-bottom: 0;
         }
       }
+    }
+  }
+
+  @include media(tablet) {
+    padding: 30px 0;
+    
+    h2 {
+      margin-bottom: 20px;
     }
   }
 }

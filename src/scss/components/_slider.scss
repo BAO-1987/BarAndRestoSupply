@@ -27,16 +27,16 @@
 
   &__desc {
     position: absolute;
-    z-index: 1;
-    margin: 0 auto;
-    translate: 0 -139px;
     left: 0;
     right: 0;
+    z-index: 1;
+    margin: 0 auto;
     padding: 40px;
     width: 100%;
     max-width: 1080px;
     box-shadow: 0 4px 100px 0 rgba(175, 173, 181, 0.1);
     background-color: var(--color-white);
+    translate: 0 -139px;
   }
 
   &__nav {
@@ -51,13 +51,13 @@
       }
 
       &--prev {
-        scale: -1 1;
         left: 30px;
+        scale: -1 1;
       }
 
       &--next {
-        right: 30px;
         left: auto;
+        right: 30px;
       }
     }
   }
@@ -99,14 +99,9 @@
 
     &__desc {
       position: relative;
-      translate: 0;
-      padding-top: 24px;
       max-width: 100%;
       inset: 0;
-    }
-
-    &__item {
-      display: block;
+      translate: 0;
     }
 
     img {

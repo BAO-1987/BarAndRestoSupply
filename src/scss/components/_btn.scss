@@ -139,5 +139,9 @@
         background-color: var(--color-green-400);
       }
     }
+
+    @include media(mobile-l) {
+      padding: 20px;
+    }
   }
 }

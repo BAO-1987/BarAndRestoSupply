@@ -82,8 +82,9 @@ body {
 }
 
 .is-scrolling {
-  scrollbar-color: var(--color-green-900) var(--color-white);
+  scrollbar-color: var(--color-green-400) var(--color-white);
   scrollbar-width: thin;
+  overflow-y: scroll;
 
   &::-webkit-scrollbar {
     width: 4px;
@@ -99,7 +100,7 @@ body {
   &::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background-color: var(--color-green-900);
+    background-color: var(--color-green-400);
   }
 
   @include media(tablet-wide) {
