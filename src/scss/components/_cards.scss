@@ -26,6 +26,13 @@
   }
 
   img {
+    width: 100%;
     margin-bottom: 26px;
+  }
+
+  @include media(mobile-l) {
+    &__content {
+      padding-right: 0;
+    }
   }
 }

@@ -24,6 +24,12 @@
     transform: translateY(-200%);
   }
 
+  .nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   @include media(tablet) {
     padding: 16px 0;
 
@@ -55,6 +61,12 @@
 
       &:not(:last-child) {
         margin-right: 0;
+      }
+    }
+
+    .nav__link {
+      &::before {
+        bottom: -15px;
       }
     }
 

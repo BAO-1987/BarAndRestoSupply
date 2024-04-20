@@ -10,19 +10,16 @@
   }
 
   &__swiper {
-    overflow: hidden;
     position: relative;
-    // margin-right: -20%;
-    // margin-left: -20%;
+    overflow: hidden;
   }
 
   &__nav {
-    // position: absolute;
-    // top: 50%;
     .btn {
       position: absolute;
       top: 35%;
       transform: translateY(-50%);
+
       &.swiper-button-disabled {
         opacity: 0.2;
         pointer-events: none;
@@ -37,6 +34,12 @@
         left: auto;
         right: 30px;
       }
+    }
+  }
+
+  @include media(tablet) {
+    &__content {
+      margin-bottom: 30px;
     }
   }
 }

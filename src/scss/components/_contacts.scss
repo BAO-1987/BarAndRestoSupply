@@ -27,6 +27,7 @@
 
     input,
     textarea {
+      border: 2px solid #ECE4DE;
       padding: 11px 0 11px 24px;
       width: 100%;
       max-width: 100%;
@@ -78,14 +79,6 @@
     &__content {
       position: relative;
       inset: 0;
-    }
-
-    input {
-      background-color: var(--color-green-400);
-
-      &::placeholder {
-        color: var(--color-white);
-      }
     }
 
     h2 {

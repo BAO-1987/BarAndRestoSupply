@@ -3,7 +3,7 @@
 
 .news {
   &__content {
-    margin: 0 auto 50px;
+    margin: 0 auto rem(50);
     text-align: center;
 
     p {
@@ -16,7 +16,7 @@
 
   &__image {
     &:not(:last-child) {
-      margin-bottom: 50px;
+      margin-bottom: rem(50);
     }
   }
 
@@ -46,11 +46,28 @@
   @include media(mobile-l) {
     &__wrapper {
       grid-template-columns: 1fr;
+      margin-bottom: 16px;
+    }
+
+    &__content {
+      margin-bottom: 30px;
+    }
+
+    &__image {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
 
     img {
       width: 100%;
       aspect-ratio: 2/1;
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
     }
   }
 }

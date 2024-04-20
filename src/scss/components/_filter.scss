@@ -60,7 +60,6 @@
   }
 
   &--portfolio {
-
     #{$root}__grid {
       grid-template-columns: 1fr;
       margin-bottom: 0;
@@ -81,10 +80,6 @@
   }
 
   @include media(tablet-wide) {
-    &__grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
     &__nav {
       max-width: 100%;
       justify-content: flex-start;
@@ -96,16 +91,14 @@
       margin-bottom: 30px;
     }
 
-    &__grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
     &__desc {
       margin-bottom: 25px;
     }
+  }
 
-    &--main {
-      padding: 40px 0;
+  @include media(mobile-l) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 

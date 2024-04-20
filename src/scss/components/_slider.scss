@@ -2,10 +2,10 @@
 @use "../utils/mixins/" as *;
 
 .slider {
-  padding: 60px 0;
+  padding: rem(60) 0;
 
   &__content {
-    margin: 0 auto 50px;
+    margin: 0 auto rem(50);
     width: 100%;
     max-width: 595px;
     text-align: center;
@@ -19,14 +19,6 @@
   &__item {
     position: relative;
     height: auto;
-
-    &::before {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      background: linear-gradient(180deg, rgba(21, 20, 17, 0) 35.378%, rgb(21, 20, 17) 137.5%);
-      inset: 0;
-    }
   }
 
   &__list {
@@ -52,6 +44,7 @@
       position: absolute;
       top: 28%;
       transform: translateY(-50%);
+
       &.swiper-button-disabled {
         opacity: 0.2;
         pointer-events: none;
@@ -84,30 +77,52 @@
   }
 
   @include media(tablet) {
+    padding: 30px 0;
+
+    &__content {
+      margin-bottom: 30px;
+    }
+
     &__desc {
       padding: 16px;
     }
 
-    &__content,
     &__list {
-      margin-bottom: 30px;
+      padding-bottom: 30px;
     }
   }
 
-  @include media(mobile-l) {
+  @include media(tablet) {
     &__list {
-      margin-bottom: 15px;
+      padding-bottom: 15px;
     }
 
     &__desc {
       position: relative;
+      translate: 0;
       padding-top: 24px;
       max-width: 100%;
       inset: 0;
     }
 
+    &__item {
+      display: block;
+    }
+
     img {
       margin-bottom: 24px;
+    }
+  }
+
+  @include media(mobile-l) {
+    .btn {
+      top: 15%;
+    }
+  }
+
+  @include media(mobile-m) {
+    .btn {
+      top: 10%;
     }
   }
 }

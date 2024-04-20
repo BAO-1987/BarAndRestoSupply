@@ -57,8 +57,8 @@
     display: flex;
     align-items: center;
     font-weight: var(--fw-700);
-    color: var(--color-black);
     line-height: 1.33;
+    color: var(--color-black);
     gap: 10px;
 
     &::before {
@@ -85,6 +85,10 @@
   @include media(tablet) {
     &__list {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__content {
+      margin-bottom: 30px;
     }
 
     &__item {

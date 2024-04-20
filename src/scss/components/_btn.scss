@@ -110,6 +110,11 @@
         opacity: 1;
       }
     }
+
+    @include media(mobile-l) {
+      height: 42px;
+      max-width: 42px;
+    }
   }
 
   &--inspiring {
